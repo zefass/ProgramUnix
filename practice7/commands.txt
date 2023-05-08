@@ -1,0 +1,6 @@
+gcc -c Wall -Werror -fpic dbg_thing.c
+gcc -shared -o libdbg.so dbg_thing.o
+sudo cp ./dbg_lib.h  /usr/include/dbg_lib.h
+sudo cp ./libdbg.so /usr/lib/libdbg.so
+gcc dbg_work.c -L /home/zefass/Downloads/practice7 -ldbg -o test
+./test
