@@ -1,6 +1,6 @@
 lspci -v
 lspci -n | grep 00:03
-sudo ifconfig enp3s0
+sudo ifconfig enp3s0 down
 sudo rmmod e1000
 make
 Dmesg result: module verification failed: signature and/or required key missing tainting kernel
