@@ -1,0 +1,7 @@
+sudo cp -r /home/zefass/Downloads/practice6/dbus_service_thing.service /etc/systemd/system/dbus_service_thing.service
+cd /etc/systemd/system
+sudo systemctl daemon-reload
+sudo systemctl start dbus_service_thing.service
+sudo systemctl status dbus_service_thing.service
+Disconnect and connect to the Internet and enter "sudo systemctl status dbus_service_thing.service" again to see a change
+
