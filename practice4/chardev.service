@@ -1,0 +1,10 @@
+[Unit] 
+Description=Service
+
+[Service] 
+User=root
+ExecStart=/home/zefass/Downloads/practice4/a.out
+Restart=always 
+
+[Install] 
+WantedBy=multi-user.target

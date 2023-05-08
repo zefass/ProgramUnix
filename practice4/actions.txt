@@ -1,0 +1,11 @@
+gcc chardevuse.c
+sudo cp -r /home/zefass/Downloads/practice4/chardev.service /etc/systemd/system/chardev.service
+make
+sudo insmod chardev.ko
+sudo mknod /dev/chardev c 238 0
+cd /etc/systemd/system
+sudo systemctl daemon-reload
+sudo systemctl start chardev.service
+sudo systemctl status chardev.service
+cd /var/log
+tail -f chardriver.log
